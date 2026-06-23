@@ -1,0 +1,53 @@
+package br.com.alura.screenmatch.modelos;
+
+import br.com.alura.screenmatch.calculo.Classificavel;
+
+public class Episodio implements Classificavel {
+    private String nome;
+    private int numeroEp;
+    private Serie serie;
+    private int totalVisualizacoes;
+
+    public int getTotalVisualizacoes() {
+        return totalVisualizacoes;
+    }
+
+    public void setTotalVisualizacoes(int totalVisualizacoes) {
+        this.totalVisualizacoes = totalVisualizacoes;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getNumeroEp() {
+        return numeroEp;
+    }
+
+    public void setNumeroEp(int numeroEp) {
+        this.numeroEp = numeroEp;
+    }
+
+    public Serie getSerie() {
+        return serie;
+    }
+
+    public void setSerie(Serie serie) {
+        this.serie = serie;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (totalVisualizacoes > 100) {
+            return 4;
+        } else if (totalVisualizacoes > 50){
+            return 2;
+        } else {
+           return 1;
+        }
+    }
+}
