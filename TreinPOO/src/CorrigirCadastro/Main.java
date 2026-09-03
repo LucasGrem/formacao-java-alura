@@ -9,6 +9,6 @@ public class Main {
         colaborador.exibirColaborador();
 
         colaborador.atuliazarColaborador("Pessoa Desenvolvedora Plena", 2);
-        
+
     }
 }
